@@ -1,13 +1,13 @@
 # This is a demo workflow file to test github actions.
-name: MegaStar WorkFlow
+name: RebelStart WorkFlow
 on:
   push:
-    branches: [master]
+    branches: [master, mega]
   pull_request:
     types: [closed]
-    branches: [master]
-  # schedule: # Cron will run only with default or base branch.
-  #   - cron: "* * * * *"
+    branches: [master, mega]
+  schedule:
+    - cron: "* * * * *"
 
 env:
   #TERRAFORM_DESTROY: "YES"
