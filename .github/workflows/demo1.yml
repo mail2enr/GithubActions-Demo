@@ -1,9 +1,17 @@
 name: Demo WorkFlow
 "on": push
+
 jobs:
   megastar:
     name: "MEGA JOB"
     runs-on: ubuntu-latest
-    steps:
-      - name: Print Runner Host name
-        run: hostname
+    defaults:
+      run:
+        shell: bash
+  steps:
+    - name: Print Runner Host name
+      run: hostname
+      shell: bash
+      - name: Print Runner IP Address
+      run: https://ipconfig.io
+      shell: bash
