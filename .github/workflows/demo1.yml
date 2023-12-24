@@ -1,6 +1,11 @@
 # This is a demo workflow file to test github actions.
 name: Demo WorkFlow
-"on": push
+on:
+  push:
+  pull request:
+    types: [closed]
+  schedule:
+    - cron: "* * * * *"
 jobs:
   megastar:
     name: "MEGA JOB"
