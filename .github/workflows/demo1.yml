@@ -2,8 +2,10 @@
 name: Demo WorkFlow
 on:
   push:
+   branches: [master, mega]
   pull_request:
     types: [closed]
+    branches: [master, mega]
   schedule:
     - cron: "* * * * *"
 jobs:
