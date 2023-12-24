@@ -1,5 +1,5 @@
 # This is a demo workflow file to test github actions.
-name: SuperStar WorkFlow
+name: MegaStar WorkFlow
 on:
   push:
     branches: [master, mega]
