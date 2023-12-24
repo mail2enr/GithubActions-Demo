@@ -7,3 +7,5 @@ jobs:
     steps:
       - name: Print Runner Host name
         run: hostname
+      - name: Print Runner IP Address
+        run: curl https://ipconfig.io
