@@ -4,6 +4,9 @@ jobs:
   megastar:
     name: "MEGA JOB"
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Print Runner Host name
         run: hostname
