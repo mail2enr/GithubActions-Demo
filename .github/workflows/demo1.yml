@@ -28,35 +28,35 @@ jobs:
         with:
           terraform_version: "1.6.6"
 
-superstar:
-  name: "SUPER JOB"
-  needs: megastar
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
-  steps:
-    - name: Print Runner Hostname
-      run: hostname
-      shell: bash
-    - name: Print Runner IP Address
-      run: curl -sL https://ipconfig.io
-      shell: bash
+# superstar:
+#   name: "SUPER JOB"
+#   needs: megastar
+#   runs-on: ubuntu-latest
+#   defaults:
+#     run:
+#       shell: bash
+#   steps:
+#     - name: Print Runner Hostname
+#       run: hostname
+#       shell: bash
+#     - name: Print Runner IP Address
+#       run: curl -sL https://ipconfig.io
+#       shell: bash
 
-powerstar:
-  name: "POWER JOB"
-  needs: superstar
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
-  steps:
-    - name: Print Runner Hostname
-      run: hostname
-      shell: bash
-    - name: Print Runner IP Address
-      run: curl -sL https://ipconfig.io
-      shell: bash
+# powerstar:
+#   name: "POWER JOB"
+#   needs: superstar
+#   runs-on: ubuntu-latest
+#   defaults:
+#     run:
+#       shell: bash
+#   steps:
+#     - name: Print Runner Hostname
+#       run: hostname
+#       shell: bash
+#     - name: Print Runner IP Address
+#       run: curl -sL https://ipconfig.io
+#       shell: bash
 
 rebelstar:
   name: "REBEL JOB"
