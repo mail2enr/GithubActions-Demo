@@ -11,47 +11,45 @@ on:
 
 jobs:
   megastar:
-  name: "MEGA JOB"
-  runs-on: ubuntu-latest
-  defaults:
-    run:
-      shell: bash
-  steps:
-    - name: Print Runner Host name
-      run: hostname
-      shell: bash
-    - name: Print Runner IP Address
-      run: curl -sL https://ipconfig.io
-      shell: bash
-    - name: Setup Terraform wiht specified version on the runner
-      uses: hashicorp/setup-terraform@v3
-      with:
-        terraform_version: "1.6.6"
+    name: "MEGA JOB"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Print Runner Host name
+        run: hostname
+        shell: bash
+      - name: Print Runner IP Address
+        run: curl -sL https://ipconfig.io
+        shell: bash
+      - name: Setup Terraform wiht specified version on the runner
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.6.6"
 
 # superstar:
 #   name: "SUPER JOB"
-#   needs: megastar
 #   runs-on: ubuntu-latest
 #   defaults:
 #     run:
 #       shell: bash
 #   steps:
-#     - name: Print Runner Hostname
+#     - name: Print Runner Host name
 #       run: hostname
 #       shell: bash
 #     - name: Print Runner IP Address
 #       run: curl -sL https://ipconfig.io
 #       shell: bash
 
-# powerstar:
+# Powerstar:
 #   name: "POWER JOB"
-#   needs: superstar
 #   runs-on: ubuntu-latest
 #   defaults:
 #     run:
 #       shell: bash
 #   steps:
-#     - name: Print Runner Hostname
+#     - name: Print Runner Host name
 #       run: hostname
 #       shell: bash
 #     - name: Print Runner IP Address
@@ -60,18 +58,15 @@ jobs:
 
 # rebelstar:
 #   name: "REBEL JOB"
-#   needs: powerstar
 #   runs-on: ubuntu-latest
 #   defaults:
 #     run:
 #       shell: bash
 #   steps:
-#     - name: Print Runner Hostname
+#     - name: Print Runner Host name
 #       run: hostname
 #       shell: bash
 #     - name: Print Runner IP Address
 #       run: curl -sL https://ipconfig.io
 #       shell: bash
-
-
 
