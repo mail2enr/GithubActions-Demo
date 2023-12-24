@@ -30,6 +30,7 @@ jobs:
     
   superstar:
     name: "SUPER JOB"
+    needs: megastar
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -44,6 +45,7 @@ jobs:
   
   powerstar:
     name: "POWER JOB"
+    needs: superstar
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -58,6 +60,7 @@ jobs:
   
   rebelstar:
     name: "POWER JOB"
+    needs: powerstar
     runs-on: ubuntu-latest
     defaults:
       run:
