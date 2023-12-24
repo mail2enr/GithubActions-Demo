@@ -3,7 +3,7 @@ name: YoungTiger WorkFlow
 on:
  workflow_dispatch:
     inputs:
-      TERRAFORM:
+      TERRAFORM_DESTROY:
         description: 'Shall We Run Terraform Destroy?'     
         required: true
         default: 'PLAN'
@@ -12,6 +12,14 @@ on:
         - PLAN
         - APPLY
         - DESTROY
+      ENVIRONMENT:
+        description: 'Select Which Subscription You Want To Deploy?'
+        required: true
+        default: 'Development'
+        type: choice
+        options:
+        - Production
+
 
 
 env:
