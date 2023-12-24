@@ -6,11 +6,10 @@ on:
       TERRAFORM_DESTROY:
         description: 'Shall We Run Terraform Destroy?'     
         required: true
-        default: 'PLAN'
+        default: 'DONT_DESTROY'
         type: choice
         options:
-        - PLAN
-        - APPLY
+        - DONT_DESTROY
         - DESTROY
       ENVIRONMENT:
         description: 'Select Which Subscription You Want To Deploy?'
